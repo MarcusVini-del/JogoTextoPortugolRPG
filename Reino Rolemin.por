@@ -1,21 +1,24 @@
 programa
 {
-	inclua biblioteca Util
+	inclua biblioteca Util --> u
 	inclua biblioteca Texto
 
 	
-	const inteiro velocidadeRapida = 0
-	const inteiro velocidadeMedia = 0
-	const inteiro velocidadeLenta = 0
-	const inteiro velocidadeSuperLenta = 0
+	const inteiro velocidadeRapida = 75
+	const inteiro velocidadeMedia = 120
+	const inteiro velocidadeLenta = 200
+	const inteiro velocidadeSuperLenta = 250
 
 	
 		 inteiro vidaMesprit = 100
-		 inteiro vidaAzelf = 110
-		 
+		 inteiro vidaAzelf = 120
 		 inteiro escolher
 		 
+		 cadeia StatusAzelf[3] = {"defesaA", "ataqueA", "velA"}
+		 cadeia StatusMesprit[3] = {"defesaM", "ataqueM", "velM"}
+		 
 		 cadeia nome
+		 
 	funcao inicio()
 	{
 		EscreverLento("????: Acorde.\n", velocidadeMedia)
@@ -25,7 +28,7 @@ programa
 		EscreverLento("Narrador: Ir ao laboratório?\n\n", velocidadeRapida)
 		escreva("          IR AO LABORATÓRIO                 NÃO IR AO LABORATORIO          \n")
 		escreva("         (clique na tecla 0)                (clique na tecla 1)         \n")
-		escreva("         ====================-             -=====================-         \n")
+		escreva("        -====================-             -=====================-         \n")
 		escreva("     =#+=====================-:*%*      -%====+============+==+%*=@-       \n")
 		escreva("     -%+================:.===-:*%-      %*=====   =+=====   -===:=@+       .\n")
 		escreva("     :%+==============-   ===-:*@-      %*=====    -==+:    -+==:=@=     \n")
@@ -46,8 +49,11 @@ programa
 		escolha(escolher)
 		{
 
-			caso 0: EscreverLento("Narrador: Indo ao laboratório", velocidadeMedia)
-				   EscreverLento("......", velocidadeSuperLenta)
+			caso 0: EscreverLento("Narrador: Indo ao laboratório\n", velocidadeMedia)
+				   para(inteiro i = 0; i <= 3; i++)
+				   {
+				   EscreverLento("...\n", velocidadeSuperLenta)
+				   }
 				   
 				   limpa()
 			pare
@@ -56,7 +62,7 @@ programa
 			pare
 		}
 
-	EscreverLento("Narrador: Ao chegar ao laboratório, você se depara com um grisalho bigodudo\n\n", velocidadeRapida)
+	EscreverLento("Narrador: Ao chegar ao laboratório, você se depara com um senhor grisalho e bigodudo\n\n", velocidadeRapida)
 	
 			escreva("                                                        %%%      @                              \n")
 			escreva("                                                      @@@*****#%%#%                             \n")
@@ -98,7 +104,111 @@ programa
 	leia(nome)	
 
 	EscreverLento("Professor Pinheiro: Então seu nome é "+ nome +", há milênios procuramos um treinador capaz de controlar um dos rolemins reis das cidades ancestrais guarmenra e vinéscoa, escolha um dos dois\n", velocidadeRapida)
-	EsccrverLento("Professor pinheiro: escolha com sabedoria, será o Mesprit ou o Azelf?", velocidadeRapida)
+	EscreverLento("Professor pinheiro: Escolha com sabedoria, será o Mesprit ou o Azelf?\n", velocidadeRapida)
+	EscreverLento("Professor Pinheiro: Primeiro falarei deles, depois você pode escolher um deles\n", velocidadeRapida)
+	EscreverLento("Professor pinheiro: O azelf remete a vida, tranquilidade e determinação, os status dele de vida é 20% acima do Mesprit. \n\n",velocidadeRapida)
+
+		escreva("                                                                                     \n")
+		escreva("                                                                                     \n")
+		escreva("                                  ---*%                                              \n")
+		escreva("                                 #==-------%                                         \n")
+		escreva("                                 ===---------==%                                     \n")
+		escreva("                                 =======-----=====@                                  \n")
+		escreva("                                 +===================                                \n")
+		escreva("                                 +=====================                              \n")
+		escreva("                                 *================%-.+==+                            \n")
+		escreva("                                 #================@*.*+==+                           \n")
+		escreva("                                 ==================+*+=*=++@                         \n")
+		escreva("                                ====================+++%==-%+                        \n")
+		escreva("                              @=========%=...%========#==#=-+%                       \n")
+		escreva("                             #=========:+..#.-:*========*-=-%+=%                     \n")
+		escreva("                            +==+====#=+::..+--%:========.---++==@                    \n")
+		escreva("                           +--%-======+::-.:-:.-%=======%-#======                    \n")
+		escreva("                          #-=#---+=====:::::=%+=======+++%    #%                     \n")
+		escreva("                          ==----*=====-=#%:::#====+*%++%                             \n")
+		escreva("                           *=======-=        @#-@%@                                  \n")
+		escreva("                                             +===-=#%                                \n")
+		escreva("                                           @==-==-%=======*                          \n")
+		escreva("                        @%         @     *-==#----:  %=========                      \n")
+		escreva("                        +==@    @==-   *::::%:::::::@    =---=-:::                   \n")
+		escreva("                       %*===@ @===== @:::::@ ::::::::::@    @-::::::%                \n")
+		escreva("               %=+%    =%====+=====%=:::::   ::::::::::::=       %#                  \n")
+		escreva("                =-===@*=+=====#*===:::::@   *::::::::::::::#    ::                   \n")
+		escreva("                ======++#++==#-#=#::::=+@   #::::::::::+:+::+ %==-                   \n")
+		escreva("                 ====++=+#++=*%=@:::+=%     *--::::::-#::%:::@===-                   \n")
+		escreva("                  *++++++*+++++#:::#         ::::::::=:::%::::===%                   \n")
+		escreva("                    %++++%+++@ +             --:::::+----=:--====                    \n")
+		escreva("                        =++=                  -------=--=--====+                     \n")
+		escreva("                        @=++*                 @=========-===                         \n")
+		escreva("                        %==+                   %%========@                           \n")
+		escreva("                        =@#                    ===== ===+                            \n")
+		escreva("                        +%=                   @====##===                             \n")
+		escreva("                       #+ =%                  ===== ===%                             \n")
+		escreva("                       %+ #=                 ===== #===                              \n")
+		escreva("                       %+  +#               ===== @==-                               \n")
+		escreva("                       #+% %+@             ====+ #==-                                \n")
+		escreva("                        ==  @+%          %===-  ===#                                 \n")
+		escreva("                        #+@  @==       @=---% %===                                   \n")
+		escreva("                         ==@   ==#   #====% @===%                                    \n")
+		escreva("                          #==    *+====* %-==-@                                      \n")
+		escreva("                             %-==-*@*-===+%                                          \n")
+		escreva("                                                                                     \n")
+		escreva("                                                                                     \n\n")
+
+	EscreverLento("Professor pinheiro: Já o Mesprit, remete a guarda, proteção, amor próprio, ele tem 20% a mais de defesa que o azelf.\n\n",velocidadeRapida)
+
+		escreva("                                                                                     \n")
+		escreva("                                                                                     \n")
+		escreva("                                        %::--:-#                                     \n")
+		escreva("                                   @=-----::::-----@                                 \n")
+		escreva("                                =--------------------%                               \n")
+		escreva("                            @-------=*=--+.*%=========+%                             \n")
+		escreva("                          *-------#:::%=-**+#==========*++                           \n")
+		escreva("                        -----==- :.*:::-+*==-=-*:::----=-+++                         \n")
+		escreva("                      =--====-  @*..@::+=++=-%::::::------%++%                       \n")
+		escreva("                    -=======@   ++...#:=-----:::%-..%------++++@                     \n")
+		escreva("                  %========   @++-..-:+-=---%::.-+.:%=-------+++*                    \n")
+		escreva("                 -======-#   +++++--%+=------..::-:%= #--=====++++                   \n")
+		escreva("                =-------@   ++++++@ -----------#+*=%   -=====--++++                  \n")
+		escreva("               @-------    +++++++    @==+*==+%==       -===---=++++                 \n")
+		escreva("               +-:----%   @++*#*::::--==+*==@@          %-------+++==                \n")
+		escreva("                ----- @+::::::::::::-=@ :--- +=-::::=%   --------%=-=%               \n")
+		escreva("                      %%::-+=#%*       :::::@  @-::::::::-=----------*               \n")
+		escreva("                                     =:::::::      @=:::::------=-*--                \n")
+		escreva("                                   =:::::::::             @--------                  \n")
+		escreva("                              :@  :::::::::::=             -------=                  \n")
+		escreva("                             *::%::::::::::::=:=            ------                   \n")
+		escreva("                             +::::::::::::::::::                                     \n")
+		escreva("                             =::::::::::::::::::                                     \n")
+		escreva("                             %:::::::::::::+::::                                     \n")
+		escreva("                              ====-::::::::::::%    #-                               \n")
+		escreva("                             %----==========*+     ---%                              \n")
+		escreva("                       --#   ----- ====#*====@    ----=                              \n")
+		escreva("                       -----@----- #===@ ====-@  :----+                              \n")
+		escreva("                        ---------+--:::@ #::::--:-----%:-----*                       \n")
+		escreva("                        @----#:*----:::* @:::-----:+--------@                        \n")
+		escreva("                          =--%+%----*::*  ::.@---#*+----==@                          \n")
+		escreva("                            #==-==  %::-  :::  *==+====#                             \n")
+		escreva("                           @====+    :::  :::   +==%                                 \n")
+		escreva("                           *====+    :::  :::    ==@                                 \n")
+		escreva("                             +=      -::  :-:   ==+=                                 \n")
+		escreva("                             %=      +--  :::   @=                                   \n")
+		escreva("                              =      *::  -::   =%                                   \n")
+		escreva("                              +@      ::  -:-  %=                                    \n")
+		escreva("                              %=      ::  -:-  =*                                    \n")
+		escreva("                               =+     ::# -:* %=                                     \n")
+		escreva("                                =*    ::  ::%%=@                                     \n")
+		escreva("                                 ==   ::  ::@=*                                      \n")
+		escreva("                                  ==-%-=  ==*=                                       \n")
+		escreva("                                    #-+   @=@                                        \n")
+		escreva("                                                                                     \n")
+		escreva("                                                                                     \n")
+
+		EscreverLento("Professor pinheiro: Qual você escolherá?\n",velocidadeRapida)
+
+		
+		
+
 	}
 			funcao EscreverLento(cadeia texto, inteiro velocidade)
 	{
@@ -136,14 +246,27 @@ programa
 			vidaAzelf = 0
 		}
 	}
-}
+			funcao StatusSorteadoAzelf(inteiro defesaA, inteiro velA, inteiro ataqueA)
+			{
+			 defesaA = u.sorteia(25, 100)
+			 ataqueA = u.sorteia(25, 100)
+			 velA = u.sorteia(25, 100)
+			}
+			funcao StatusSorteadoMesprit(inteiro defesaM, inteiro velM, inteiro ataqueM)
+			{
+			 defesaM = u.sorteia(25, 100)
+			 ataqueM = u.sorteia(25, 100)
+			 velM = u.sorteia(25, 100)
+			}
+}			
+
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 7073; 
- * @DOBRAMENTO-CODIGO = [102, 118, 132, 128];
+ * @POSICAO-CURSOR = 7396; 
+ * @DOBRAMENTO-CODIGO = [212, 228, 238, 248, 254];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
