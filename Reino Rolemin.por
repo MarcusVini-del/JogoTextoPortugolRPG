@@ -5,9 +5,10 @@ programa
 
 	const inteiro velocidadeImagens = 5
 	const inteiro velocidadeRapida = 0
-	const inteiro velocidadeMedia = 0
+	const inteiro velocidadeMedia = 85
 	const inteiro velocidadeLenta = 0
-	const inteiro velocidadeSuperLenta = 0
+	
+	const inteiro velocidadeSuperLenta = 210
 
 		// variaveis e vetores de status dos dois rolemins ancestrais
 	
@@ -100,7 +101,7 @@ programa
 			caso 1: EscreverLento("????: Você não tem escolha, vá!", velocidadeLenta)
 			        limpa()
 			pare
-			caso contrario: EscreverLento("????: Você não tem escolha, vá!", velocidadeLenta)
+			caso contrario: EscreverLento("????: Você não tem escolha, VÁ LOGO!", velocidadeLenta)
 			        limpa()
 		}
 
@@ -144,7 +145,7 @@ programa
 		
 	EscreverLento("Professor Pinheiro: Olá futuro treinador.\n", velocidadeRapida)
 	EscreverLento("Professor Pinheiro: Seja bem vindo(a) ao Reino Rolemin, o incrível mundo dos rolemins, aqui você vai explorar a diversidade das florestas, espécies, cidades, conhecer e ser amigo dos incríveis rolemins.\n", velocidadeRapida)
-	EscreverLento("Professor Pinheiro: Eles são criaturas vivas dotada de poderes especiais e coexiste com nós humanos\n", velocidadeRapida)
+	EscreverLento("Professor Pinheiro: Eles são criaturas vivas dotadas de poderes especiais e coexiste com nós humanos\n", velocidadeRapida)
 	EscreverLento("Professor Pinheiro: Mas primeiramente, qual o seu nome?\n\n", velocidadeRapida)
 
 	 escreva("|▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓|\n")
@@ -298,25 +299,153 @@ programa
 
 				se(roleminEscolhido == "Azelf" ou roleminEscolhido == "azelf")
 		{
-			EscreverLento("Professor Pinheiro: Boa escolha, agora vá para a batalha no alto do castelo principal do reino de Vinéscoa, é onde se encontra Mesprit\n", velocidadeRapida)
+			EscreverLento("Professor Pinheiro: Boa escolha, agora vá para a batalha no Reino de Vinéscoa, é onde se encontra Mesprit\n", velocidadeRapida)
 			StatusSorteadoAzelf()
 
 			roleminEscolhidologico = verdadeiro
 		}
 		senao se(roleminEscolhido == "Mesprit" ou roleminEscolhido == "mesprit")
 		{
-			EscreverLento("Professor Pinheiro: Boa escolha, agora vá para a batalha nas cavernas internas de baixo do reino de Guarmenra, é onde se encontra Azelf\n", velocidadeRapida)
+			EscreverLento("Professor Pinheiro: Boa escolha, agora vá para a batalha no Reino de Guamenra, onde se encontra Azelf\n", velocidadeRapida)
 			StatusSorteadoMesprit()
 
 			roleminEscolhidologico = verdadeiro
 		}
 			}
 		}
+
+		EscreverLento("Profesor Pinheiro: Você pode ir com o nosso avião, ou com o nosso buggy, qual você prefere?\n", velocidadeRapida)
+		leia(escolher)
 		
+		 escreva("                     Avião                                     Buggy        \n")
+		escreva("                (clique na tecla 0)                       (clique na tecla 1)         \n")
+		escreva("             ▓▓▓█▓███▓███████▓▓▓▓▓▓▓▓▓                ▓█▓█▓██▓▓█▓▓▓▓▓███▓████▓▓▓▓▓              \n")
+		escreva("           ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓            ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▓▓▓             \n")
+		escreva("          ▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓          ▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓           \n")
+		escreva("         ▓█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▓         ██▓▒▒▒▒▒░   ░▓▒▒▒▒▒▒▒▒   ▒▓▒▒▒▒▒██        \n")
+		escreva("       ▒██▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒   ▒▒▒▒▒▒▒██▒        ██▓▒▒▒▒▒░     ▒▒▒▒▒░    ░▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒ ▒▒▒▒▒▒▒▒▒▒▓▒     ▒▒▒▒▒▒▒██▒        ██▓▒▒▒▒▒▒▒▒            ▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ░██▓▒▒▒░   ░▓▒▒▒▒▓▒     ▒▓▒▒▒▒▒▒▒██▒        ██▓▒▒▒▒▒▒▒▒▓▒        ▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒     ▒▒▒░     ▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒▒▒        ▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒▒▒    ▒▒    ▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒▒░        ▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒▒▒▒▒      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒   ▒▒▒▒▒░   ▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒▒▒▒▒     ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒░     ▒▒▒▒▒░░    ▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒░▒░░▒▒▒▒▒▒▒▒▒░▒░▒▒▒▒▒▒▒██▓       \n")
+		escreva("       ░██▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ░██▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓██▒        ██▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓██▒       \n")
+		escreva("       ▒██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▒        ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▓       \n")
+		escreva("       ░██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▒        ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▓       \n")
+		escreva("        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒       \n")
+		escreva("          ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           ▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓            \n")
+		escreva("            ██████████████████████████░                ██████████████████████████▒              \n")
+
+		
+		 escolha(escolher){
+
+			caso 0:
+			EscreverLento("Narrador: o professor leva você no aeroporto, onde está o avião\n, Chegando perto você vê uma moça de cabelos vermelhos, assim que a vê, ela dá um grito animado dizando:\n", velocidadeRapida)
+			EscreverLento("BEM VINDO(A), BELO(A) VIAJANTE!!!, a viagem não irá demorar, você logo chegará ao seu destino.\n", velocidadeRapida)
+
+			//a partir daqui será a narrração da viagem
+			EscreverLento("Narrador: Assim que você se acomoda no avião, durante o caminho ela começa a conversar com você, porém, você se distrai com as paisagens linda de fora do avião.\n", velocidadeRapida)
+			EscreverLento("Narrador: Você avista o quanto o Reino é grande e colossal de verde por causa da flora do lugar\n", velocidadeRapida)
+			EscreverLento("Narrador: Você volta a realidade quando você ouve um impacto forte vindo da janela frontal do avião\n", velocidadeRapida)
+			EscreverLento("Narrador: Você percebe que a situação está complicada, quando a moça de cabelos vermelho começa a se desesperar e um bando de corvos começa a se aproximar do avião\n", velocidadeRapida)
+			EscreverLento("Narrador: No meio dessa situação, tu pergunta a moça o que está acontecendo e ela responde você com um tom desesperado: NÓS VAMOS TODOS MORRER!!!\n", velocidadeRapida)
+			EscreverLento("Narrador: Quando você olha para fora, á uma grande quantidades de corvos atacando o avião, alguns estão bicando o vidro,\n E outros estão presos na turbina impedindo de funcionar e queimando\n", velocidadeRapida)
+          	EscreverLento("Narrador: O avião começa a cair...\n Na primeira trincada do vidro, você se levanta. \n Na segunda, você tenta ajudar. \n Na terceira, sua visão fica turva. \n Na quarta, seu ouvido começa a zumbir. \n No quinto... tela preta...Você morreu...", velocidadeRapida)
+			pare
+			
+			caso 1:
+
+	          EscreverLento("Narrador: O professor leva você na garagem, onde está o buggy.\n Você adentra no buggy e segue o caminho.\n", velocidadeRapida)
+	          EscreverLento("Narrador: Enquanto você dirige, de longe avista muitas plantas carnívoras", velocidadeRapida)
+	          EscreverLento("Narrador: Para se prevenir que as plantas não te ataquem, você tem duas opções disponíveis no buggy. Tocha, álcool e isqueiro ou um frasco de sonífero. Qual você deseja usar\n", velocidadeRapida) 
+
+	          leia(escolher)
+	          escreva("           tocha, isqueiro e álcool                       borrífero        \n")
+		escreva("                (clique na tecla 0)                       (clique na tecla 1)         \n")
+		escreva("             ▓▓▓█▓███▓███████▓▓▓▓▓▓▓▓▓                ▓█▓█▓██▓▓█▓▓▓▓▓███▓████▓▓▓▓▓              \n")
+		escreva("           ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓            ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▓▓▓             \n")
+		escreva("          ▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓          ▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓           \n")
+		escreva("         ▓█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▓         ██▓▒▒▒▒▒░   ░▓▒▒▒▒▒▒▒▒   ▒▓▒▒▒▒▒██        \n")
+		escreva("       ▒██▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒   ▒▒▒▒▒▒▒██▒        ██▓▒▒▒▒▒░     ▒▒▒▒▒░    ░▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒ ▒▒▒▒▒▒▒▒▒▒▓▒     ▒▒▒▒▒▒▒██▒        ██▓▒▒▒▒▒▒▒▒            ▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ░██▓▒▒▒░   ░▓▒▒▒▒▓▒     ▒▓▒▒▒▒▒▒▒██▒        ██▓▒▒▒▒▒▒▒▒▓▒        ▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒     ▒▒▒░     ▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒▒▒        ▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒▒▒    ▒▒    ▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒▒░        ▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒▒▒▒▒      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒   ▒▒▒▒▒░   ▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒▒▒▒▒     ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒░     ▒▒▒▒▒░░    ▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒░▒░░▒▒▒▒▒▒▒▒▒░▒░▒▒▒▒▒▒▒██▓       \n")
+		escreva("       ░██▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ░██▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓██▒        ██▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓██▒       \n")
+		escreva("       ▒██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▒        ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▓       \n")
+		escreva("       ░██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▒        ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▓       \n")
+		escreva("        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒       \n")
+		escreva("          ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           ▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓            \n")
+		escreva("            ██████████████████████████░                ██████████████████████████▒              \n")
+	          escolha(escolher){
+
+			caso 0: EscreverLento("Narrador: Ao começar a remexer no bug, você pega a tocha e o isqueiro, acendendo a tocha e mirando nas plantas que se aproximavam de você, fazendo com que elas se queimassem com o fogo.\n", velocidadeRapida)
+			pare
+			caso 1: EscreverLento("Narrador: Ao começar a remexer no bug, você pega o borrífero(borrifador + sonífero), fazendo com que elas adormecessem.\n", velocidadeRapida)
+			pare
+			caso contrario: escreva("Não foi isso que foi pedido\n")
+			
+			leia(escolher)
+	          escreva("           tocha, isqueiro e álcool                       borrífero        \n")
+		escreva("                (clique na tecla 0)                       (clique na tecla 1)         \n")
+		escreva("             ▓▓▓█▓███▓███████▓▓▓▓▓▓▓▓▓                ▓█▓█▓██▓▓█▓▓▓▓▓███▓████▓▓▓▓▓              \n")
+		escreva("           ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓            ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▓▓▓             \n")
+		escreva("          ▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓          ▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓           \n")
+		escreva("         ▓█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▓         ██▓▒▒▒▒▒░   ░▓▒▒▒▒▒▒▒▒   ▒▓▒▒▒▒▒██        \n")
+		escreva("       ▒██▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒   ▒▒▒▒▒▒▒██▒        ██▓▒▒▒▒▒░     ▒▒▒▒▒░    ░▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒ ▒▒▒▒▒▒▒▒▒▒▓▒     ▒▒▒▒▒▒▒██▒        ██▓▒▒▒▒▒▒▒▒            ▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ░██▓▒▒▒░   ░▓▒▒▒▒▓▒     ▒▓▒▒▒▒▒▒▒██▒        ██▓▒▒▒▒▒▒▒▒▓▒        ▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒     ▒▒▒░     ▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒▒▒        ▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒▒▒    ▒▒    ▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒▒░        ▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒▒▒▒▒      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒   ▒▒▒▒▒░   ▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒▒▒▒▒     ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒░     ▒▒▒▒▒░░    ▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒░▒░░▒▒▒▒▒▒▒▒▒░▒░▒▒▒▒▒▒▒██▓       \n")
+		escreva("       ░██▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ░██▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓██▒        ██▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓██▒       \n")
+		escreva("       ▒██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▒        ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▓       \n")
+		escreva("       ░██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▒        ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▓       \n")
+		escreva("        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒       \n")
+		escreva("          ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           ▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓            \n")
+		escreva("            ██████████████████████████░                ██████████████████████████▒              \n")
+			pare
+		} 
+			pare
+			caso contrario: escreva("Não foi isso que foi pedido\n")
+			
+			leia(escolher)
+	          escreva("           tocha, isqueiro e álcool                       borrífero        \n")
+		escreva("                (clique na tecla 0)                       (clique na tecla 1)         \n")
+		escreva("             ▓▓▓█▓███▓███████▓▓▓▓▓▓▓▓▓                ▓█▓█▓██▓▓█▓▓▓▓▓███▓████▓▓▓▓▓              \n")
+		escreva("           ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓            ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▓▓▓             \n")
+		escreva("          ▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓          ▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓           \n")
+		escreva("         ▓█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▓         ██▓▒▒▒▒▒░   ░▓▒▒▒▒▒▒▒▒   ▒▓▒▒▒▒▒██        \n")
+		escreva("       ▒██▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒   ▒▒▒▒▒▒▒██▒        ██▓▒▒▒▒▒░     ▒▒▒▒▒░    ░▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒ ▒▒▒▒▒▒▒▒▒▒▓▒     ▒▒▒▒▒▒▒██▒        ██▓▒▒▒▒▒▒▒▒            ▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ░██▓▒▒▒░   ░▓▒▒▒▒▓▒     ▒▓▒▒▒▒▒▒▒██▒        ██▓▒▒▒▒▒▒▒▒▓▒        ▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒     ▒▒▒░     ▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒▒▒        ▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒▒▒    ▒▒    ▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒▒░        ▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒▒▒▒▒      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒   ▒▒▒▒▒░   ▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒▒▒▒▒     ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒░     ▒▒▒▒▒░░    ▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ▒██▓▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒░▒░░▒▒▒▒▒▒▒▒▒░▒░▒▒▒▒▒▒▒██▓       \n")
+		escreva("       ░██▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
+		escreva("       ░██▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓██▒        ██▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓██▒       \n")
+		escreva("       ▒██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▒        ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▓       \n")
+		escreva("       ░██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▒        ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▓       \n")
+		escreva("        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒       \n")
+		escreva("          ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           ▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓            \n")
+		escreva("            ██████████████████████████░                ██████████████████████████▒              \n")
+			pare
+		} 
 
 		
 		
-
 	}
 			funcao EscreverLento(cadeia texto, inteiro velocidade)
 	{
@@ -356,15 +485,17 @@ programa
 	}
 			funcao StatusSorteadoAzelf()
 			{
-			defesaA = u.sorteia(25, 100)
-			ataqueA = u.sorteia(25, 100)
-			velA = u.sorteia(25, 100)
+			//também tem inteiro  inteiro vidaAzelf = 120
+			defesaA = u.sorteia(55, 100)
+			ataqueA = u.sorteia(55, 100)
+			velA = u.sorteia(55, 100)
 			}
 			funcao StatusSorteadoMesprit()
 			{
-			 defesaM = u.sorteia(25, 100)
-			 ataqueM = u.sorteia(25, 100)
-			 velM = u.sorteia(25, 100)
+			// também tem  inteiro vidaMesprit = 100
+			 defesaM = u.sorteia(55, 100)
+			 ataqueM = u.sorteia(55, 100)
+			 velM = u.sorteia(55, 100)
 			}
 }			
 
@@ -373,8 +504,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 5710; 
- * @DOBRAMENTO-CODIGO = [320, 336, 346, 356, 362];
+ * @POSICAO-CURSOR = 33842; 
+ * @DOBRAMENTO-CODIGO = [455];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
