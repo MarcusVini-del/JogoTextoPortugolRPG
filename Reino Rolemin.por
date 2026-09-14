@@ -4,10 +4,9 @@ programa
 	inclua biblioteca Texto
 
 	const inteiro velocidadeImagens = 5
-	const inteiro velocidadeRapida = 0
+	const inteiro velocidadeRapida = 65
 	const inteiro velocidadeMedia = 85
-	const inteiro velocidadeLenta = 0
-	
+	const inteiro velocidadeLenta = 100
 	const inteiro velocidadeSuperLenta = 210
 
 		// variaveis e vetores de status dos dois rolemins ancestrais
@@ -478,6 +477,26 @@ programa
 		vidaAzelf = vidaAzelf - quantia
 		
 		se(vidaAzelf <= 0)
+		{
+			escreva("Azelf morreu\n")
+			vidaAzelf = 0
+		}
+	}
+			funcao StatusSorteadoAzelf()
+			{
+			//também tem inteiro  inteiro vidaAzelf = 120
+			defesaA = u.sorteia(55, 100)
+			ataqueA = u.sorteia(55, 100)
+			velA = u.sorteia(55, 100)
+			}
+			funcao StatusSorteadoMesprit()
+			{
+			// também tem  inteiro vidaMesprit = 100
+			 defesaM = u.sorteia(55, 100)
+			 ataqueM = u.sorteia(55, 100)
+			 velM = u.sorteia(55, 100)
+			}
+}	
 		{
 			escreva("Azelf morreu\n")
 			vidaAzelf = 0
