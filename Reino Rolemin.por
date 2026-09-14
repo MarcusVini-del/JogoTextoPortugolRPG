@@ -7,7 +7,7 @@ programa
 	const inteiro velocidadeRapida = 65
 	const inteiro velocidadeMedia = 85
 	const inteiro velocidadeLenta = 100
-	const inteiro velocidadeSuperLenta = 210
+	const inteiro velocidadeSuperLenta = 120
 
 		// variaveis e vetores de status dos dois rolemins ancestrais
 	
