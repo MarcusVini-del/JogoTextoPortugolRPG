@@ -3,11 +3,11 @@ programa
 	inclua biblioteca Util --> u
 	inclua biblioteca Texto
 
-	const inteiro velocidadeImagens = 5
-	const inteiro velocidadeRapida = 65
-	const inteiro velocidadeMedia = 85
-	const inteiro velocidadeLenta = 100
-	const inteiro velocidadeSuperLenta = 210
+	const inteiro velocidadeImagens = 0
+	const inteiro velocidadeRapida = 0
+	const inteiro velocidadeMedia = 0
+	const inteiro velocidadeLenta = 0
+	const inteiro velocidadeSuperLenta = 0
 
 		// variaveis e vetores de status dos dois rolemins ancestrais
 	
@@ -23,7 +23,7 @@ programa
 		 cadeia StatusAzelf[3] = {"defesaA", "ataqueA", "velA"}
 		 cadeia StatusMesprit[3] = {"defesaM", "ataqueM", "velM"}
 
-		//variaveis que serão lidas ou escolhidas
+		//variaveis que serão lidas ou escolhidas ou usadas de parâmetro
 		 
 		 cadeia nome
 		 cadeia roleminEscolhido
@@ -31,6 +31,8 @@ programa
 		 inteiro escolher
 		 inteiro escolherAtaque
 		 inteiro escolheracao
+		 logico desviando
+		 inteiro danoCausado
 		 
 	funcao inicio()
 	{
@@ -274,7 +276,7 @@ programa
 
 		EscreverLento("Professor Pinheiro: Qual você escolherá?\n",velocidadeRapida)
 		leia(roleminEscolhido)
-
+	
 		se(roleminEscolhido == "Azelf" ou roleminEscolhido == "azelf" ou roleminEscolhido == "AZELF")
 		{
 			EscreverLento("Professor Pinheiro: Boa escolha, agora vá para a batalha no alto do castelo principal do reino de Vinéscoa, é onde se encontra Mesprit\n", velocidadeRapida)
@@ -310,7 +312,8 @@ programa
 		
 		 
 		
-		 escolha(escolher){
+		 escolha(escolher)
+		 {
 
 			caso 0:
 			EscreverLento("Narrador: o professor leva você no aeroporto, onde está o avião\n Chegando perto você vê uma moça de cabelos vermelhos, assim que a vê, ela dá um grito animado dizando:\n", velocidadeRapida)
@@ -382,9 +385,9 @@ programa
 		escreva("  \\ |  | |  |   \\     /__) |  .--' |  .  '.' \n")
 		escreva("   `'  '-'  '    \\   /     |  `---.|  |\\  \\  \n")
 		escreva("     `-----'      `-'      `------'`--' '--' \n")
-
+	 
 			pare
-			
+		 		
 			caso 1:
 
 	          EscreverLento("Narrador: O professor leva você na garagem, onde está o buggy.\n Você adentra no buggy e segue o caminho.\n", velocidadeRapida)
@@ -415,41 +418,15 @@ programa
 		
 	          leia(escolher)
 	         
-	          escolha(escolher){
+	          escolha(escolher)
+	          {
 
 			caso 0: EscreverLento("Narrador: Ao começar a remexer no buggy, você pega a tocha e o isqueiro, acendendo a tocha e mirando nas plantas que se aproximavam de você, fazendo com que elas se queimassem com o fogo.\n", velocidadeRapida)
 			pare
 			caso 1: EscreverLento("Narrador: Ao começar a remexer no buggy, você pega o borrífero(borrifador + sonífero), jogando  o sonífero nelas, fazendo com que elas adormecessem.\n", velocidadeRapida)
 			pare
 			caso contrario: escreva("Não foi isso que foi pedido\n")
-			
-			leia(escolher)
-	          escreva("           tocha, isqueiro e álcool                       borrífero        \n")
-		escreva("                (clique na tecla 0)                       (clique na tecla 1)         \n")
-		escreva("             ▓▓▓█▓███▓███████▓▓▓▓▓▓▓▓▓                ▓█▓█▓██▓▓█▓▓▓▓▓███▓████▓▓▓▓▓              \n")
-		escreva("           ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓            ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▓▓▓             \n")
-		escreva("          ▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓          ▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓           \n")
-		escreva("         ▓█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▓         ██▓▒▒▒▒▒░   ░▓▒▒▒▒▒▒▒▒   ▒▓▒▒▒▒▒██        \n")
-		escreva("       ▒██▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒   ▒▒▒▒▒▒▒██▒        ██▓▒▒▒▒▒░     ▒▒▒▒▒░    ░▒▒▒▒▒▒▒██▒       \n")
-		escreva("       ▒██▓▒▒▒▒ ▒▒▒▒▒▒▒▒▒▒▓▒     ▒▒▒▒▒▒▒██▒        ██▓▒▒▒▒▒▒▒▒            ▒▒▒▒▒▒▒▒▒██▒       \n")
-		escreva("       ░██▓▒▒▒░   ░▓▒▒▒▒▓▒     ▒▓▒▒▒▒▒▒▒██▒        ██▓▒▒▒▒▒▒▒▒▓▒        ▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
-		escreva("       ▒██▓▒▒▒▒     ▒▒▒░     ▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒▒▒        ▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
-		escreva("       ▒██▓▒▒▒▒▒▒    ▒▒    ▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒▒░        ▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
-		escreva("       ▒██▓▒▒▒▒▒▒▒▒      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒   ▒▒▒▒▒░   ▒▒▒▒▒▒▒▒▒██▒       \n")
-		escreva("       ▒██▓▒▒▒▒▒▒▒▒     ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒░     ▒▒▒▒▒░░    ▒▒▒▒▒▒▒██▒       \n")
-		escreva("       ▒██▓▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒░▒░░▒▒▒▒▒▒▒▒▒░▒░▒▒▒▒▒▒▒██▓       \n")
-		escreva("       ░██▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▒        ██▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██▒       \n")
-		escreva("       ░██▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓██▒        ██▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓██▒       \n")
-		escreva("       ▒██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▒        ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▓       \n")
-		escreva("       ░██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▒        ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▓       \n")
-		escreva("        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒       \n")
-		escreva("          ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           ▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓            \n")
-		escreva("            ██████████████████████████░                ██████████████████████████▒              \n")
-			pare
-		} 
-			pare
-			caso contrario: escreva("Não foi isso que foi pedido\n")
-			
+
 			escreva("           tocha, isqueiro e álcool                       borrífero        \n")
 		escreva("                (clique na tecla 0)                       (clique na tecla 1)         \n")
 		escreva("             ▓▓▓█▓███▓███████▓▓▓▓▓▓▓▓▓                ▓█▓█▓██▓▓█▓▓▓▓▓███▓████▓▓▓▓▓              \n")
@@ -471,14 +448,16 @@ programa
 		escreva("        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒       \n")
 		escreva("          ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           ▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓            \n")
 		escreva("            ██████████████████████████░                ██████████████████████████▒              \n")
-			
 			leia(escolher)
+	          
 			pare
 		} 
+		 }
 
 		EscreverLento("Narrador: Ao você chegar no campo de batalha, você argumenta telepaticamente com o rolemin desafiante, escolha um argumento\n", velocidadeRapida)
 
-		 escolha(escolher){
+		 escolha(escolher)
+		 {
 
 			caso 0: 
 	          escreva("      	    bó batalhar?                   	     bó batalhar?        \n")
@@ -504,7 +483,7 @@ programa
 		escreva("            ██████████████████████████░                ██████████████████████████▒              \n")
 		leia(escolher)
 			pare
-
+		 }
 			EscreverLento("Narrador: depois da sua argumentação genial, ele aceita o seu pedido e a luta começa\n", velocidadeRapida)
 
 		enquanto(vidaAzelf > 0 e vidaMesprit > 0)
@@ -513,18 +492,53 @@ programa
 		escreva("Seu HP: ", vidaAzelf, " | HP Inimigo: ", vidaMesprit, "\n") 
 			
 		escreva("+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓+\n")
-		escreva("▓ O que você irá fazer? ▓   FIGHT               ▓\n")
-		escreva("▓                       ▓ (tecla 0)    SWERVE   ▓\n")
-		escreva("▓                       ▓            (tecla 1)  ▓\n")
-		escreva("+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓+\n")
+		escreva("▓                       ▓   FIGHT   ▓           ▓\n")
+		escreva("▓ O que você irá fazer? ▓ (tecla 0) ▓  SWERVE   ▓\n")
+		escreva("▓                       ▓           ▓  (tecla 1)▓\n")
+		escreva("+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓+\n\n")
 
 		leia(escolheracao)
-		
+
+		se(escolheracao == 0)
+		{
+		escreva("+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓+")
+		escreva("▓                ESCOLHA O ATAQUE               ▓\n")
+		escreva("+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓+")
+		escreva("▓       FIRE BLITZ      ▓       GIGA IMPACT     ▓\n")
+		escreva("▓           (0)         ▓           (1)         ▓\n")
+		escreva("▓-----------------------------------------------▓\n")
+		escreva("▓      DRAGON ASCENT    ▓     PRISMATIC LASER   ▓\n")
+		escreva("▓           (2)         ▓           (3)         ▓\n")
+		escreva("+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓+\n")
+		leia(escolherAtaque)
+
+		se (escolherAtaque == 0)
+		{
+			danoCausado = u.sorteia(15,20) 
+		}
+			senao se (escolherAtaque == 1)
+		{
+			danoCausado = u.sorteia(25,30) 
+		}
+			senao se (escolherAtaque == 2)
+		{
+			danoCausado = u.sorteia(15,20) 
+		}	
+
+			senao se (escolherAtaque == 3)
+			{ 
+				danoCausado = u.sorteia(25,30)
+				
+			}
+		}
+			
+
+		desviando = falso
 		}
 }
 			 
-		
-	}
+
+	
 		senao se(roleminEscolhido == "Mesprit" ou roleminEscolhido == "mesprit" ou roleminEscolhido == "MESPRIT")
 		{
 			EscreverLento("Professor Pinheiro: Boa escolha, agora vá para a batalha nas cavernas internas de baixo do reino de Guarmenra, é onde se encontra Azelf\n", velocidadeRapida)
@@ -781,8 +795,8 @@ programa
             escreva("Não foi isso que foi pedido\n")
     }
    }
-			 
-	{	
+	}		 
+	
 		senao
 		{
 			enquanto(roleminEscolhidologico == falso)
@@ -863,8 +877,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2884; 
- * @DOBRAMENTO-CODIGO = [816, 810, 826, 840, 836];
+ * @POSICAO-CURSOR = 38101; 
+ * @DOBRAMENTO-CODIGO = [541, 799, 824, 840, 850, 860, 866];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
