@@ -31,8 +31,9 @@ programa
 		 inteiro escolher
 		 inteiro escolherAtaque
 		 inteiro escolheracao
-		 logico desviando
+		 logico  desviando
 		 inteiro danoCausado
+		 inteiro danoInimigo
 		 
 	funcao inicio()
 	{
@@ -460,8 +461,8 @@ programa
 		 {
 
 			caso 0: 
-	          escreva("      	    bó batalhar?                   	     bó batalhar?        \n")
-		escreva("                (clique na tecla 0)                       (clique na tecla 1)         \n")
+	          escreva("      	   bó batalhar?                   	    bó batalhar?        \n")
+		escreva("               (clique na tecla 0)                      (clique na tecla 1)         \n")
 		escreva("             ▓▓▓█▓███▓███████▓▓▓▓▓▓▓▓▓                ▓█▓█▓██▓▓█▓▓▓▓▓███▓████▓▓▓▓▓              \n")
 		escreva("           ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓            ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▓▓▓             \n")
 		escreva("          ▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓          ▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓           \n")
@@ -501,6 +502,8 @@ programa
 
 		se(escolheracao == 0)
 		{
+		desviando = falso
+			
 		escreva("+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓+")
 		escreva("▓                ESCOLHA O ATAQUE               ▓\n")
 		escreva("+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓+")
@@ -513,32 +516,64 @@ programa
 		leia(escolherAtaque)
 
 		se (escolherAtaque == 0)
-		{
+			{
 			danoCausado = u.sorteia(15,20) 
-		}
-			senao se (escolherAtaque == 1)
-		{
+			}
+		senao se (escolherAtaque == 1)
+			{
 			danoCausado = u.sorteia(25,30) 
-		}
-			senao se (escolherAtaque == 2)
-		{
+			}
+		senao se (escolherAtaque == 2)
+			{
 			danoCausado = u.sorteia(15,20) 
-		}	
+			}	
 
-			senao se (escolherAtaque == 3)
+		senao se (escolherAtaque == 3)
 			{ 
-				danoCausado = u.sorteia(25,30)
-				
+			danoCausado = u.sorteia(25,30)
 			}
 		}
-			
 
-		desviando = falso
+		se(escolheracao == 1)
+		{
+			desviando = verdadeiro
+			EscreverLento("\nNarrador: Você se preparou para desviar do próximo ataque!\n", velocidadeRapida)
+		}
+		
+		senao se (vidaMesprit <= 0)
+		{ 
+		pare 
+		} 
+
+		escreva("\nNarrador: Turno do Mesprit...\n") 
+
+		inteiro danoInimigo = u.sorteia(15, 25) 
+
+  
+		se (desviando == verdadeiro) 
+		{ 
+     // Ao desviar, o dano é zerado ou reduzido drasticamente 
+
+	escreva("Narrador: Você desviou com sucesso do ataque do rolemin!\n") 
+
+	     }
+
+	senao se(desviando == falso)
+	{
+
+	PerderVidaAzelf(u.sorteia(15, 25))
+
+	escreva("Narrador: O Mesprit te atacou e causou ", danoInimigo, " de dano!\n", velocidadeRapida) 
+
+	}
+
+	}
+
 		}
 }
 			 
 
-	
+
 		senao se(roleminEscolhido == "Mesprit" ou roleminEscolhido == "mesprit" ou roleminEscolhido == "MESPRIT")
 		{
 			EscreverLento("Professor Pinheiro: Boa escolha, agora vá para a batalha nas cavernas internas de baixo do reino de Guarmenra, é onde se encontra Azelf\n", velocidadeRapida)
@@ -572,7 +607,7 @@ programa
 
 		leia(escolher)
 		
-		 
+		
 		
 		 escolha(escolher){
 
@@ -870,15 +905,14 @@ programa
 			 defesaM = u.sorteia(55, 100)
 			 velM = u.sorteia(55, 100)
 			}
-}			
-
+}		
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 38101; 
- * @DOBRAMENTO-CODIGO = [541, 799, 824, 840, 850, 860, 866];
+ * @POSICAO-CURSOR = 59383; 
+ * @DOBRAMENTO-CODIGO = [865, 859, 879, 875, 889, 885, 895, 901];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
